@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lb
+spec:
+  #Default backend service
+  defaultBackend:
+    service:
+      name: wwwwebserver 
+      port:
+        number: 80
+
+#spec:
+#  rules:
+# - host: tema4.io
+#   http:
+#      paths:
+#      - path: /
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: wwwwebserver
+#            port:
+#              number: 80
